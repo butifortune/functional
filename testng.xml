@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="saucedemo">
+
+    <listeners>
+        <listener class-name="com.stdbank.helper.TestListener"/>
+    </listeners>
+    <test name="saucedemo">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="com.stdbank.tests.LoginTest"/>
+        </classes>
+    </test>
+
+</suite>
