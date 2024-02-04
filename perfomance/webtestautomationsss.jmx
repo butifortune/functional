@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="webtestautomationsss" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.3.1.23. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="sec-ch-ua" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua</stringProp>
+            <stringProp name="Header.value">&quot;Not A(Brand&quot;;v=&quot;99&quot;, &quot;Google Chrome&quot;;v=&quot;121&quot;, &quot;Chromium&quot;;v=&quot;121&quot;</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-mobile" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+            <stringProp name="Header.value">?0</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-platform" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+            <stringProp name="Header.value">&quot;macOS&quot;</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">www.saucedemo.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_2" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_2</stringProp>
+            <stringProp name="Argument.value">events.backtrace.io</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain"></stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+        <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+        <collectionProp name="AuthManager.auth_list"/>
+        <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">2</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">0</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Test" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.saucedemo.com/" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path"></stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">0.0</stringProp>
+              <stringProp name="ConstantTimer.delay">0</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 0 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://events.backtrace.io/api/unique-events/submit?universe=UNIVERSE&amp;token=TOKEN" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;application&quot;:&quot;Swag Store&quot;,&quot;appversion&quot;:&quot;3.0.0&quot;,&quot;unique_events&quot;:[{&quot;timestamp&quot;:1706875136,&quot;attributes&quot;:{&quot;application.session&quot;:&quot;967466e3-f3fc-4c03-b20c-38b95c1cc154&quot;,&quot;backtrace.agent&quot;:&quot;@backtrace-labs/react&quot;,&quot;backtrace.version&quot;:&quot;0.0.5&quot;,&quot;browser.name&quot;:&quot;Chrome&quot;,&quot;browser.version&quot;:&quot;121.0.0.0&quot;,&quot;engine.name&quot;:&quot;Blink&quot;,&quot;engine.version&quot;:&quot;121.0.0.0&quot;,&quot;browser.platform&quot;:&quot;MacIntel&quot;,&quot;uname.sysname&quot;:&quot;Mac OS&quot;,&quot;uname.version&quot;:&quot;10.15.7&quot;,&quot;device.model&quot;:&quot;Macintosh&quot;,&quot;device.vendor&quot;:&quot;Apple&quot;,&quot;mobile&quot;:&quot;false&quot;,&quot;user.agent.full&quot;:&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36&quot;,&quot;application&quot;:&quot;Swag Store&quot;,&quot;process.age&quot;:&quot;0&quot;,&quot;hostname&quot;:&quot;www.saucedemo.com&quot;,&quot;referrer&quot;:&quot;https://www.saucedemo.com/&quot;,&quot;location.port&quot;:&quot;&quot;,&quot;location.protocol&quot;:&quot;https:&quot;,&quot;location.origin&quot;:&quot;https://www.saucedemo.com&quot;,&quot;location.href&quot;:&quot;https://www.saucedemo.com/&quot;,&quot;language&quot;:&quot;en-US&quot;,&quot;cookies.enable&quot;:&quot;true&quot;,&quot;document.domain&quot;:&quot;www.saucedemo.com&quot;,&quot;document.baseURI&quot;:&quot;https://www.saucedemo.com/&quot;,&quot;document.title&quot;:&quot;Swag Labs&quot;,&quot;document.referrer&quot;:&quot;&quot;,&quot;localstorage.enable&quot;:&quot;true&quot;,&quot;window.innerHeight&quot;:&quot;917&quot;,&quot;window.innerWidth&quot;:&quot;1728&quot;,&quot;window.outerHeight&quot;:&quot;1004&quot;,&quot;window.outerWidth&quot;:&quot;1728&quot;,&quot;window.pageXOffset&quot;:&quot;0&quot;,&quot;window.pageYOffset&quot;:&quot;0&quot;,&quot;window.screenX&quot;:&quot;0&quot;,&quot;window.screenY&quot;:&quot;38&quot;,&quot;window.screenLeft&quot;:&quot;0&quot;,&quot;window.screenTop&quot;:&quot;38&quot;,&quot;guid&quot;:&quot;967466e3-f3fc-4c03-b20c-38b95c1cc154&quot;,&quot;application.version&quot;:&quot;3.0.0&quot;},&quot;unique&quot;:[&quot;guid&quot;]}],&quot;metadata&quot;:{&quot;dropped_events&quot;:0}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/unique-events/submit?universe=UNIVERSE&amp;token=TOKEN</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-type" elementType="Header">
+                  <stringProp name="Header.name">Content-type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://events.backtrace.io/api/summed-events/submit?universe=UNIVERSE&amp;token=TOKEN" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;application&quot;:&quot;Swag Store&quot;,&quot;appversion&quot;:&quot;3.0.0&quot;,&quot;summed_events&quot;:[{&quot;timestamp&quot;:1706875136,&quot;attributes&quot;:{&quot;application.session&quot;:&quot;967466e3-f3fc-4c03-b20c-38b95c1cc154&quot;,&quot;backtrace.agent&quot;:&quot;@backtrace-labs/react&quot;,&quot;backtrace.version&quot;:&quot;0.0.5&quot;,&quot;browser.name&quot;:&quot;Chrome&quot;,&quot;browser.version&quot;:&quot;121.0.0.0&quot;,&quot;engine.name&quot;:&quot;Blink&quot;,&quot;engine.version&quot;:&quot;121.0.0.0&quot;,&quot;browser.platform&quot;:&quot;MacIntel&quot;,&quot;uname.sysname&quot;:&quot;Mac OS&quot;,&quot;uname.version&quot;:&quot;10.15.7&quot;,&quot;device.model&quot;:&quot;Macintosh&quot;,&quot;device.vendor&quot;:&quot;Apple&quot;,&quot;mobile&quot;:&quot;false&quot;,&quot;user.agent.full&quot;:&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36&quot;,&quot;application&quot;:&quot;Swag Store&quot;,&quot;process.age&quot;:&quot;0&quot;,&quot;hostname&quot;:&quot;www.saucedemo.com&quot;,&quot;referrer&quot;:&quot;https://www.saucedemo.com/&quot;,&quot;location.port&quot;:&quot;&quot;,&quot;location.protocol&quot;:&quot;https:&quot;,&quot;location.origin&quot;:&quot;https://www.saucedemo.com&quot;,&quot;location.href&quot;:&quot;https://www.saucedemo.com/&quot;,&quot;language&quot;:&quot;en-US&quot;,&quot;cookies.enable&quot;:&quot;true&quot;,&quot;document.domain&quot;:&quot;www.saucedemo.com&quot;,&quot;document.baseURI&quot;:&quot;https://www.saucedemo.com/&quot;,&quot;document.title&quot;:&quot;Swag Labs&quot;,&quot;document.referrer&quot;:&quot;&quot;,&quot;localstorage.enable&quot;:&quot;true&quot;,&quot;window.innerHeight&quot;:&quot;917&quot;,&quot;window.innerWidth&quot;:&quot;1728&quot;,&quot;window.outerHeight&quot;:&quot;1004&quot;,&quot;window.outerWidth&quot;:&quot;1728&quot;,&quot;window.pageXOffset&quot;:&quot;0&quot;,&quot;window.pageYOffset&quot;:&quot;0&quot;,&quot;window.screenX&quot;:&quot;0&quot;,&quot;window.screenY&quot;:&quot;38&quot;,&quot;window.screenLeft&quot;:&quot;0&quot;,&quot;window.screenTop&quot;:&quot;38&quot;,&quot;guid&quot;:&quot;967466e3-f3fc-4c03-b20c-38b95c1cc154&quot;,&quot;application.version&quot;:&quot;3.0.0&quot;},&quot;metric_group&quot;:&quot;Application Launches&quot;}],&quot;metadata&quot;:{&quot;dropped_events&quot;:0}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/summed-events/submit?universe=UNIVERSE&amp;token=TOKEN</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-type" elementType="Header">
+                  <stringProp name="Header.name">Content-type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://events.backtrace.io/api/summed-events/submit?universe=UNIVERSE&amp;token=TOKEN" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;application&quot;:&quot;Swag Store&quot;,&quot;appversion&quot;:&quot;3.0.0&quot;,&quot;summed_events&quot;:[{&quot;timestamp&quot;:1706875148,&quot;attributes&quot;:{&quot;application.session&quot;:&quot;967466e3-f3fc-4c03-b20c-38b95c1cc154&quot;,&quot;backtrace.agent&quot;:&quot;@backtrace-labs/react&quot;,&quot;backtrace.version&quot;:&quot;0.0.5&quot;,&quot;browser.name&quot;:&quot;Chrome&quot;,&quot;browser.version&quot;:&quot;121.0.0.0&quot;,&quot;engine.name&quot;:&quot;Blink&quot;,&quot;engine.version&quot;:&quot;121.0.0.0&quot;,&quot;browser.platform&quot;:&quot;MacIntel&quot;,&quot;uname.sysname&quot;:&quot;Mac OS&quot;,&quot;uname.version&quot;:&quot;10.15.7&quot;,&quot;device.model&quot;:&quot;Macintosh&quot;,&quot;device.vendor&quot;:&quot;Apple&quot;,&quot;mobile&quot;:&quot;false&quot;,&quot;user.agent.full&quot;:&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36&quot;,&quot;application&quot;:&quot;Swag Store&quot;,&quot;process.age&quot;:&quot;0&quot;,&quot;hostname&quot;:&quot;www.saucedemo.com&quot;,&quot;referrer&quot;:&quot;https://www.saucedemo.com/&quot;,&quot;location.port&quot;:&quot;&quot;,&quot;location.protocol&quot;:&quot;https:&quot;,&quot;location.origin&quot;:&quot;https://www.saucedemo.com&quot;,&quot;location.href&quot;:&quot;https://www.saucedemo.com/&quot;,&quot;language&quot;:&quot;en-US&quot;,&quot;cookies.enable&quot;:&quot;true&quot;,&quot;document.domain&quot;:&quot;www.saucedemo.com&quot;,&quot;document.baseURI&quot;:&quot;https://www.saucedemo.com/&quot;,&quot;document.title&quot;:&quot;Swag Labs&quot;,&quot;document.referrer&quot;:&quot;&quot;,&quot;localstorage.enable&quot;:&quot;true&quot;,&quot;window.innerHeight&quot;:&quot;917&quot;,&quot;window.innerWidth&quot;:&quot;1728&quot;,&quot;window.outerHeight&quot;:&quot;1004&quot;,&quot;window.outerWidth&quot;:&quot;1728&quot;,&quot;window.pageXOffset&quot;:&quot;0&quot;,&quot;window.pageYOffset&quot;:&quot;0&quot;,&quot;window.screenX&quot;:&quot;0&quot;,&quot;window.screenY&quot;:&quot;38&quot;,&quot;window.screenLeft&quot;:&quot;0&quot;,&quot;window.screenTop&quot;:&quot;38&quot;,&quot;guid&quot;:&quot;967466e3-f3fc-4c03-b20c-38b95c1cc154&quot;,&quot;application.version&quot;:&quot;3.0.0&quot;},&quot;metric_group&quot;:&quot;Application Launches&quot;}],&quot;metadata&quot;:{&quot;dropped_events&quot;:1}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/summed-events/submit?universe=UNIVERSE&amp;token=TOKEN</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-type" elementType="Header">
+                  <stringProp name="Header.name">Content-type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://events.backtrace.io/api/unique-events/submit?universe=UNIVERSE&amp;token=TOKEN" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;application&quot;:&quot;Swag Store&quot;,&quot;appversion&quot;:&quot;3.0.0&quot;,&quot;unique_events&quot;:[{&quot;timestamp&quot;:1706875150,&quot;attributes&quot;:{&quot;application.session&quot;:&quot;967466e3-f3fc-4c03-b20c-38b95c1cc154&quot;,&quot;backtrace.agent&quot;:&quot;@backtrace-labs/react&quot;,&quot;backtrace.version&quot;:&quot;0.0.5&quot;,&quot;browser.name&quot;:&quot;Chrome&quot;,&quot;browser.version&quot;:&quot;121.0.0.0&quot;,&quot;engine.name&quot;:&quot;Blink&quot;,&quot;engine.version&quot;:&quot;121.0.0.0&quot;,&quot;browser.platform&quot;:&quot;MacIntel&quot;,&quot;uname.sysname&quot;:&quot;Mac OS&quot;,&quot;uname.version&quot;:&quot;10.15.7&quot;,&quot;device.model&quot;:&quot;Macintosh&quot;,&quot;device.vendor&quot;:&quot;Apple&quot;,&quot;mobile&quot;:&quot;false&quot;,&quot;user.agent.full&quot;:&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36&quot;,&quot;application&quot;:&quot;Swag Store&quot;,&quot;process.age&quot;:&quot;0&quot;,&quot;hostname&quot;:&quot;www.saucedemo.com&quot;,&quot;referrer&quot;:&quot;https://www.saucedemo.com/&quot;,&quot;location.port&quot;:&quot;&quot;,&quot;location.protocol&quot;:&quot;https:&quot;,&quot;location.origin&quot;:&quot;https://www.saucedemo.com&quot;,&quot;location.href&quot;:&quot;https://www.saucedemo.com/&quot;,&quot;language&quot;:&quot;en-US&quot;,&quot;cookies.enable&quot;:&quot;true&quot;,&quot;document.domain&quot;:&quot;www.saucedemo.com&quot;,&quot;document.baseURI&quot;:&quot;https://www.saucedemo.com/&quot;,&quot;document.title&quot;:&quot;Swag Labs&quot;,&quot;document.referrer&quot;:&quot;&quot;,&quot;localstorage.enable&quot;:&quot;true&quot;,&quot;window.innerHeight&quot;:&quot;917&quot;,&quot;window.innerWidth&quot;:&quot;1728&quot;,&quot;window.outerHeight&quot;:&quot;1004&quot;,&quot;window.outerWidth&quot;:&quot;1728&quot;,&quot;window.pageXOffset&quot;:&quot;0&quot;,&quot;window.pageYOffset&quot;:&quot;0&quot;,&quot;window.screenX&quot;:&quot;0&quot;,&quot;window.screenY&quot;:&quot;38&quot;,&quot;window.screenLeft&quot;:&quot;0&quot;,&quot;window.screenTop&quot;:&quot;38&quot;,&quot;guid&quot;:&quot;967466e3-f3fc-4c03-b20c-38b95c1cc154&quot;,&quot;application.version&quot;:&quot;3.0.0&quot;},&quot;unique&quot;:[&quot;guid&quot;]}],&quot;metadata&quot;:{&quot;dropped_events&quot;:1}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/unique-events/submit?universe=UNIVERSE&amp;token=TOKEN</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-type" elementType="Header">
+                  <stringProp name="Header.name">Content-type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://events.backtrace.io/api/summed-events/submit?universe=UNIVERSE&amp;token=TOKEN" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;application&quot;:&quot;Swag Store&quot;,&quot;appversion&quot;:&quot;3.0.0&quot;,&quot;summed_events&quot;:[{&quot;timestamp&quot;:1706875170,&quot;attributes&quot;:{&quot;application.session&quot;:&quot;967466e3-f3fc-4c03-b20c-38b95c1cc154&quot;,&quot;backtrace.agent&quot;:&quot;@backtrace-labs/react&quot;,&quot;backtrace.version&quot;:&quot;0.0.5&quot;,&quot;browser.name&quot;:&quot;Chrome&quot;,&quot;browser.version&quot;:&quot;121.0.0.0&quot;,&quot;engine.name&quot;:&quot;Blink&quot;,&quot;engine.version&quot;:&quot;121.0.0.0&quot;,&quot;browser.platform&quot;:&quot;MacIntel&quot;,&quot;uname.sysname&quot;:&quot;Mac OS&quot;,&quot;uname.version&quot;:&quot;10.15.7&quot;,&quot;device.model&quot;:&quot;Macintosh&quot;,&quot;device.vendor&quot;:&quot;Apple&quot;,&quot;mobile&quot;:&quot;false&quot;,&quot;user.agent.full&quot;:&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36&quot;,&quot;application&quot;:&quot;Swag Store&quot;,&quot;process.age&quot;:&quot;0&quot;,&quot;hostname&quot;:&quot;www.saucedemo.com&quot;,&quot;referrer&quot;:&quot;https://www.saucedemo.com/&quot;,&quot;location.port&quot;:&quot;&quot;,&quot;location.protocol&quot;:&quot;https:&quot;,&quot;location.origin&quot;:&quot;https://www.saucedemo.com&quot;,&quot;location.href&quot;:&quot;https://www.saucedemo.com/&quot;,&quot;language&quot;:&quot;en-US&quot;,&quot;cookies.enable&quot;:&quot;true&quot;,&quot;document.domain&quot;:&quot;www.saucedemo.com&quot;,&quot;document.baseURI&quot;:&quot;https://www.saucedemo.com/&quot;,&quot;document.title&quot;:&quot;Swag Labs&quot;,&quot;document.referrer&quot;:&quot;&quot;,&quot;localstorage.enable&quot;:&quot;true&quot;,&quot;window.innerHeight&quot;:&quot;917&quot;,&quot;window.innerWidth&quot;:&quot;1728&quot;,&quot;window.outerHeight&quot;:&quot;1004&quot;,&quot;window.outerWidth&quot;:&quot;1728&quot;,&quot;window.pageXOffset&quot;:&quot;0&quot;,&quot;window.pageYOffset&quot;:&quot;0&quot;,&quot;window.screenX&quot;:&quot;0&quot;,&quot;window.screenY&quot;:&quot;38&quot;,&quot;window.screenLeft&quot;:&quot;0&quot;,&quot;window.screenTop&quot;:&quot;38&quot;,&quot;guid&quot;:&quot;967466e3-f3fc-4c03-b20c-38b95c1cc154&quot;,&quot;application.version&quot;:&quot;3.0.0&quot;},&quot;metric_group&quot;:&quot;Application Launches&quot;}],&quot;metadata&quot;:{&quot;dropped_events&quot;:2}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/summed-events/submit?universe=UNIVERSE&amp;token=TOKEN</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-type" elementType="Header">
+                  <stringProp name="Header.name">Content-type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://events.backtrace.io/api/unique-events/submit?universe=UNIVERSE&amp;token=TOKEN" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;application&quot;:&quot;Swag Store&quot;,&quot;appversion&quot;:&quot;3.0.0&quot;,&quot;unique_events&quot;:[{&quot;timestamp&quot;:1706875171,&quot;attributes&quot;:{&quot;application.session&quot;:&quot;967466e3-f3fc-4c03-b20c-38b95c1cc154&quot;,&quot;backtrace.agent&quot;:&quot;@backtrace-labs/react&quot;,&quot;backtrace.version&quot;:&quot;0.0.5&quot;,&quot;browser.name&quot;:&quot;Chrome&quot;,&quot;browser.version&quot;:&quot;121.0.0.0&quot;,&quot;engine.name&quot;:&quot;Blink&quot;,&quot;engine.version&quot;:&quot;121.0.0.0&quot;,&quot;browser.platform&quot;:&quot;MacIntel&quot;,&quot;uname.sysname&quot;:&quot;Mac OS&quot;,&quot;uname.version&quot;:&quot;10.15.7&quot;,&quot;device.model&quot;:&quot;Macintosh&quot;,&quot;device.vendor&quot;:&quot;Apple&quot;,&quot;mobile&quot;:&quot;false&quot;,&quot;user.agent.full&quot;:&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36&quot;,&quot;application&quot;:&quot;Swag Store&quot;,&quot;process.age&quot;:&quot;0&quot;,&quot;hostname&quot;:&quot;www.saucedemo.com&quot;,&quot;referrer&quot;:&quot;https://www.saucedemo.com/&quot;,&quot;location.port&quot;:&quot;&quot;,&quot;location.protocol&quot;:&quot;https:&quot;,&quot;location.origin&quot;:&quot;https://www.saucedemo.com&quot;,&quot;location.href&quot;:&quot;https://www.saucedemo.com/&quot;,&quot;language&quot;:&quot;en-US&quot;,&quot;cookies.enable&quot;:&quot;true&quot;,&quot;document.domain&quot;:&quot;www.saucedemo.com&quot;,&quot;document.baseURI&quot;:&quot;https://www.saucedemo.com/&quot;,&quot;document.title&quot;:&quot;Swag Labs&quot;,&quot;document.referrer&quot;:&quot;&quot;,&quot;localstorage.enable&quot;:&quot;true&quot;,&quot;window.innerHeight&quot;:&quot;917&quot;,&quot;window.innerWidth&quot;:&quot;1728&quot;,&quot;window.outerHeight&quot;:&quot;1004&quot;,&quot;window.outerWidth&quot;:&quot;1728&quot;,&quot;window.pageXOffset&quot;:&quot;0&quot;,&quot;window.pageYOffset&quot;:&quot;0&quot;,&quot;window.screenX&quot;:&quot;0&quot;,&quot;window.screenY&quot;:&quot;38&quot;,&quot;window.screenLeft&quot;:&quot;0&quot;,&quot;window.screenTop&quot;:&quot;38&quot;,&quot;guid&quot;:&quot;967466e3-f3fc-4c03-b20c-38b95c1cc154&quot;,&quot;application.version&quot;:&quot;3.0.0&quot;},&quot;unique&quot;:[&quot;guid&quot;]}],&quot;metadata&quot;:{&quot;dropped_events&quot;:2}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/unique-events/submit?universe=UNIVERSE&amp;token=TOKEN</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-type" elementType="Header">
+                  <stringProp name="Header.name">Content-type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">Result.csv</stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
