@@ -1,6 +1,6 @@
 ### Automation Framework
 ### Task
-- Login and order
+- Login and filter
 
 ### The guide how execute
 - Change preferred browser in Framework properties file
